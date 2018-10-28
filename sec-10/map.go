@@ -25,19 +25,18 @@ func main() {
 	//below will return you a value and bool, if key found will return value and true, if no key found will return zero value and false
 	fmt.Println("\n")
 	fmt.Println("access key and valid check on map")
-	v, isValid := myMap["Phansa"]
+	v, ok := myMap["Phansa"]
 	fmt.Println(v)
-	fmt.Println(isValid)
+	fmt.Println(ok)
 
 	//use if else to check is valid? and return the value
-	if v, isValid := myMap["Phansa1"]; isValid {
+	if v, ok := myMap["Phansa1"]; ok {
 		fmt.Println("Your age is -> ", v)
 	} else {
 		fmt.Println("No key found")
 	}
 
 	//Add new key:value to map
-
 	myMap["Mike"] = 35
 
 	//Use rang to pair key:value and print out
@@ -49,7 +48,6 @@ func main() {
 	}
 
 	//Range a slide index and value and print out
-
 	xi := []int{1, 3, 5, 7, 9, 11}
 
 	fmt.Println("\n")
@@ -59,4 +57,16 @@ func main() {
 		fmt.Println(index, ":", value)
 	}
 
+	// Delete key on map
+	delete(myMap, "Sinthorn")
+	fmt.Println(myMap)
+
+	// Check key befor delete if key not exist then added instead
+	if v, ok := myMap["Nut"]; ok {
+		fmt.Println("On process of delete -> ", v)
+		delete(myMap, "Nut")
+		fmt.Println("--------------->")
+		fmt.Println(v, "is deleted")
+		fmt.Println(myMap)
+	}
 }
