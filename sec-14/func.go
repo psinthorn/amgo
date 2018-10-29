@@ -7,6 +7,7 @@ type team struct {
 	name   string
 	slogan string
 	desc   string
+	year   int
 }
 
 type contact struct {
@@ -17,11 +18,12 @@ type contact struct {
 	city     string
 	country  string
 	postCode int
-	phone1   int
-	mobile   int
-	fax      int
-	www      string
-	email    string
+	//contacNo map[string]int{ "phone": 555-555, "mobile": 888-888, "fax": 000-000 }
+	phone1 int
+	mobile int
+	fax    int
+	www    string
+	email  string
 }
 
 type social struct {
@@ -39,8 +41,21 @@ type teamInfo struct {
 
 func main() {
 
+	ft := team{
+		name:   "Sin FC.",
+		slogan: "Imagine and Fun ทำในสิ่งที่ตัวเองเก่งที่สุด",
+		desc:   "สมัครเล่น",
+		year:   1980,
+	}
+
+	fmt.Println(ft)
+
+	order := []int{1, 3, 5, 7, 9, 11}
+
 	x := foo("Sinthorn")
 	fmt.Println(x)
+
+	sum(order)
 
 }
 
@@ -55,4 +70,11 @@ func foo(str string) bool {
 		return x
 	}
 
+}
+
+func sum(sumTotal []int) int {
+	order := sumTotal
+
+	fmt.Println(order)
+	return 1
 }
