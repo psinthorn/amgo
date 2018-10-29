@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	//Anonymous func
-	//syntex pattern func(){}()
+	//syntex pattern func(parameter(s)){}(argument(s))
 	func() {
 		fmt.Println("This is anonymous func without argument passing in")
 	}()
