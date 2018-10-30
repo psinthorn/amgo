@@ -10,7 +10,7 @@ func main() {
 
 //FizzBuzz Func
 func fizzBuzz(num int) {
-	fmt.Println("fizzBuzz Func")
+	fmt.Println("fizzBuzz Algorythm")
 	for i := 1; i <= num; i++ {
 		if i%15 == 0 {
 			fmt.Println("FizzBuzz")
