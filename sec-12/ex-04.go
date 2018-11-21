@@ -30,6 +30,11 @@ func main() {
 
 	fmt.Println(anm)
 
+	fmt.Println(anm.phone)
+	fmt.Printf("Type %T\n", anm.phone)
+	fmt.Println(anm.favFoods)
+	fmt.Printf("Type %T\n", anm.favFoods)
+
 	//loop map with for->range key: value
 	for key, value := range anm.phone {
 		fmt.Println(key, value)
